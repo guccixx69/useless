@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Do I Need an Umbrella?</title>
+    <title>Useless Projects Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;500;700&family=Rubik+Bubbles&display=swap" rel="stylesheet">
     <style>
       * {
         margin: 0;
@@ -12,209 +15,234 @@
       }
 
       body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         min-height: 100vh;
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-          url("wallpaper.jpg");
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+          url("home.jpg");
         background-size: cover;
         background-position: center;
+        background-attachment: fixed;
         color: #e1e1e1;
         padding: 20px;
       }
 
-      /* Glass morphism container */
-      .glass-container {
-        background: rgba(31, 41, 55, 0.8);
-        backdrop-filter: blur(10px);
-        border-radius: 24px;
-        padding: 30px;
-        width: 90%;
-        max-width: 500px;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+      .content {
+        text-align: center;
+        position: relative;
+        z-index: 2;
       }
 
       h1 {
-        font-size: 2.4rem;
+        font-family: 'Rubik Bubbles', cursive;
+        font-size: 4rem;
         font-weight: 700;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         color: #fff;
         text-align: center;
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        text-shadow: 0 0 10px rgba(149, 128, 255, 0.5),
+                     0 0 20px rgba(149, 128, 255, 0.3),
+                     0 0 30px rgba(149, 128, 255, 0.2);
+        letter-spacing: 2px;
       }
 
-      .input-field {
+      .tagline {
+        font-size: 1.4rem;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 50px;
+        font-weight: 300;
+        text-align: center;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      }
+
+      .buttons-container {
         display: flex;
-        align-items: center;
+        gap: 30px;
         justify-content: center;
-        gap: 12px;
-        margin: 20px 0;
-      }
-
-      input[type="text"] {
-        flex: 1;
-        padding: 16px 24px;
-        font-size: 1rem;
-        border: none;
-        border-radius: 16px;
-        background: rgba(17, 24, 39, 0.7);
-        color: #fff;
-        backdrop-filter: blur(5px);
-        transition: all 0.3s ease;
-      }
-
-      input[type="text"]::placeholder {
-        color: rgba(255, 255, 255, 0.6);
-      }
-
-      input[type="text"]:focus {
-        outline: none;
-        background: rgba(17, 24, 39, 0.9);
-        box-shadow: 0 0 0 2px rgba(216, 127, 182, 0.5);
-      }
-
-      button {
-        padding: 16px 32px;
-        font-size: 1rem;
-        border: none;
-        border-radius: 16px;
-        background: rgba(216, 127, 182, 0.9);
-        color: #fff;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        font-weight: 500;
-        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-      }
-
-      button:hover {
-        background: rgba(216, 127, 182, 1);
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(216, 127, 182, 0.3);
-      }
-
-      #results {
-        margin-top: 30px;
-        width: 100%;
-      }
-
-      .day-recommendation {
-        font-size: 1rem;
-        padding: 20px;
-        background: rgba(17, 24, 39, 0.7);
-        margin-bottom: 12px;
-        border-radius: 16px;
-        backdrop-filter: blur(5px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        transition: all 0.3s ease;
-        color: #fff;
-        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-      }
-
-      .day-recommendation:hover {
-        background: rgba(17, 24, 39, 0.8);
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      }
-
-      .error-box {
-        display: none;
-        background: rgba(220, 38, 38, 0.2);
-        color: #fff;
-        padding: 20px;
-        border-radius: 16px;
+        flex-wrap: wrap;
         margin-top: 20px;
+      }
+
+      .nav-button {
+        padding: 20px 40px;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        font-weight: 500;
+        text-decoration: none;
+        letter-spacing: 1.5px;
+        position: relative;
+        overflow: hidden;
         backdrop-filter: blur(5px);
-        border: 1px solid rgba(220, 38, 38, 0.3);
-        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
       }
 
-      .fade-in {
-        opacity: 0;
-        animation: fadeIn 0.5s ease forwards;
+      .useful {
+        background: linear-gradient(135deg, rgba(255, 107, 156, 0.9) 0%, rgba(255, 141, 199, 0.9) 100%);
+        color: #fff;
+        box-shadow: 0 5px 20px rgba(255, 107, 156, 0.4),
+                    0 0 30px rgba(255, 107, 156, 0.3);
       }
 
-      @keyframes fadeIn {
-        to {
+      .useless {
+        background: linear-gradient(135deg, rgba(149, 128, 255, 0.9) 0%, rgba(128, 181, 255, 0.9) 100%);
+        color: #fff;
+        box-shadow: 0 5px 20px rgba(149, 128, 255, 0.4),
+                    0 0 30px rgba(149, 128, 255, 0.3);
+      }
+
+      .nav-button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.3),
+          transparent
+        );
+        transition: 0.5s;
+      }
+
+      .nav-button:hover {
+        transform: translateY(-5px) scale(1.05);
+      }
+
+      .nav-button:hover::before {
+        left: 100%;
+      }
+
+      .credit {
+        position: fixed;
+        bottom: 20px;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1rem;
+        font-weight: 300;
+        text-align: center;
+        width: 100%;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .particles {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      .particle {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: rgba(255, 255, 255, 0.6);
+        border-radius: 50%;
+        animation: float 20s infinite linear;
+      }
+
+      .pop-in {
+        animation: popIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(100vh) translateX(0);
+          opacity: 0;
+        }
+        50% {
+          opacity: 0.8;
+        }
+        100% {
+          transform: translateY(-100vh) translateX(100px);
+          opacity: 0;
+        }
+      }
+
+      @keyframes popIn {
+        0% {
+          opacity: 0;
+          transform: scale(0.8) translateY(30px);
+        }
+        100% {
           opacity: 1;
+          transform: scale(1) translateY(0);
         }
       }
 
       @media (max-width: 600px) {
-        .glass-container {
-          width: 95%;
-          padding: 20px;
-        }
-
         h1 {
-          font-size: 2rem;
+          font-size: 3rem;
         }
 
-        .input-field {
+        .tagline {
+          font-size: 1.2rem;
+        }
+
+        .nav-button {
+          width: 80%;
+          padding: 15px 30px;
+        }
+
+        .buttons-container {
           flex-direction: column;
-          gap: 16px;
-        }
-
-        input[type="text"],
-        button {
-          width: 100%;
+          align-items: center;
+          gap: 20px;
         }
       }
     </style>
   </head>
   <body>
-    <div class="glass-container">
-      <h1>Do I Need an Umbrella?</h1>
-      <div class="input-field">
-        <input
-          type="text"
-          id="location"
-          placeholder="Enter city or postal code"
-        />
-        <button onclick="checkWeather()">Check</button>
+    <div class="particles" id="particles"></div>
+    <div class="content pop-in">
+      <h1>Melcow!</h1>
+      <div class="tagline"> shall we begin?✨</div>
+      <div class="buttons-container">
+        <a href="/useful.html" class="nav-button useful">useful</a>
+        <a href="/umbrella.html" class="nav-button useless">useless</a>
       </div>
-      <div id="results"></div>
-      <div id="errorBox" class="error-box">
-        Incorrect city name provided. Please check the spelling and try again.
-      </div>
+    </div>
+    <div class="credit">
+      Powered for Useless Projects!
     </div>
 
     <script>
-      async function checkWeather() {
-        const location = document.getElementById("location").value;
-        const resultsContainer = document.getElementById("results");
-        const errorBox = document.getElementById("errorBox");
-        errorBox.style.display = "none";
+      // Create floating particles
+      function createParticles() {
+        const container = document.getElementById('particles');
+        const particleCount = 30;
 
-        resultsContainer.innerHTML = "";
-
-        try {
-          const response = await fetch(
-            `/weather?location=${encodeURIComponent(location)}`
-          );
-
-          if (!response.ok) {
-            errorBox.style.display = "block";
-            return;
-          }
-
-          const data = await response.json();
-
-          data.recommendations.forEach((recommendation, index) => {
-            const dayDiv = document.createElement("div");
-            dayDiv.classList.add("day-recommendation", "fade-in");
-            dayDiv.textContent = `Day ${index + 1}: ${recommendation}`;
-            resultsContainer.appendChild(dayDiv);
-          });
-        } catch (error) {
-          console.error("Error fetching weather data:", error);
-          errorBox.style.display = "block";
+        for (let i = 0; i < particleCount; i++) {
+          const particle = document.createElement('div');
+          particle.className = 'particle';
+          
+          // Random starting position
+          particle.style.left = Math.random() * 100 + '%';
+          particle.style.top = Math.random() * 100 + '%';
+          
+          // Random size
+          const size = Math.random() * 3 + 2;
+          particle.style.width = size + 'px';
+          particle.style.height = size + 'px';
+          
+          // Random animation duration and delay
+          particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+          particle.style.animationDelay = (Math.random() * 5) + 's';
+          
+          container.appendChild(particle);
         }
       }
+
+      // Initialize particles on load
+      window.onload = createParticles;
     </script>
   </body>
 </html>
