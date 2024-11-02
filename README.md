@@ -11,15 +11,15 @@ Welcome to UselessUChecker, serving one purpose: to answer the question, “Shou
 
 
 ### The Solution (that nobody asked for)
-OK UselessUChecker can remind you that there are much more dumb things than someone reading this
+This can help to let the personal know if they will have to carry a umbrella without any ads or distractions.
 
 ## Technical Details
 ### Technologies/Components-Html,CSS,OpenWeatherAPI,Vercel,codesandbox
 For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
+- Languages-HTML,CSS,JavaScript
+- Framework-Express
+- Library-Axios
+- Tools-Node.JS,Codesandbox,(The environment for rapid prototyping and development),dotenv(module that loads environment variables from a .env file into process.env), N
 
 ### Implementation
 For Software: VSCode.
@@ -28,8 +28,6 @@ There is nothing to install.
 # Run
 Since it is a functioning website, there is nothing to run other than the website
 
-### Project Documentation
-For Software:
 
 # Screenshots (Add at least 3)
 ![Screenshot1](![photo_6138479547524432508_w](https://github.com/user-attachments/assets/bdf57b00-5341-49ea-8efc-d9c706a837c3)
@@ -44,9 +42,6 @@ For Software:
 )
 *It's a small surprise*
 
-# Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
 
 ### Project Demo
 # Video
