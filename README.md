@@ -28,8 +28,8 @@ There is nothing to install.
 # Run
 Since it is a functioning website, there is nothing to run other than the website
 # Links
--https://7fggyn-3000.csb.app/
--https://useless-xi.vercel.app/(if first one is down)
+- https://7fggyn-3000.csb.app/
+- https://useless-xi.vercel.app/ (if first one is down)
 
 
 # Screenshots (Add at least 3)
