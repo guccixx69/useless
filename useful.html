@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ammavan Prone Area Calculator</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Armata&display=swap');
+
+    body {
+      font-family: 'Armata', sans-serif;
+      background-image: url('ammavan.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .container {
+      max-width: 500px;
+      width: 100%;
+      padding: 30px;
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2em;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      font-size: 1em;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #333;
+      color: white;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #555;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 1.5em;
+      color: #333;
+    }
+    .alert {
+      color: #c00;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Ammavan Prone Area Calculator</h1>
+    <input type="text" id="areaInput" placeholder="Enter area name..." />
+    <button onclick="calculateProneArea()">Check Ammavan Proneness</button>
+    <div id="result" class="result"></div>
+  </div>
+
+  <script>
+    function calculateProneArea() {
+      const areaInput = document.getElementById('areaInput').value.trim();
+      if (areaInput === "") {
+        alert("Please enter an area name.");
+        return;
+      }
+
+      const pronePercentage = Math.floor(Math.random() * 101); // Random percentage from 0 to 100
+      let message = `Ammavan Proneness in ${areaInput.toUpperCase()}: ${pronePercentage}%`;
+
+      if (pronePercentage > 70) {
+        message += "<br><span class='alert'>High Alert! Be Extra Vigilant!</span>";
+      } else if (pronePercentage > 40) {
+        message += "<br><span class='alert'>Moderate Alert. Stay Cautious.</span>";
+      } else {
+        message += "<br>Low Alert. Stay Aware.";
+      }
+
+      document.getElementById('result').innerHTML = message;
+    }
+  </script>
+</body>
+</html>
