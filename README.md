@@ -7,7 +7,7 @@
 ### Individual Name: [Adil Ali]
 
 ### Project Description
-Welcome to UselessUChecker, serving one purpose: to answer the question, “Should I bring an umbrella?” Spoiler alert: it doesn’t really matter. With its absurdly simple interface  With its intentionally pointless use-case and utterly blunder functionality. And just when you think it can’t get any sillier, there’s a small surprise waiting for you! So take a moment to enjoy this playful distraction that proves not everything on the internet needs to be useful
+Welcome to UselessUChecker, serving one purpose: to answer the question, “Should I bring an umbrella?” Spoiler alert: it doesn’t really matter. With its absurdly simple interface  With its intentionally pointless use-case and utterly blunder functionality. And just when you think it can’t get any sillier, there’s a small surprise waiting for you! So take a moment to enjoy this playful distraction that proves not everything on the internet needs to be useful.Links are under the page.
 
 
 ### The Solution (that nobody asked for)
@@ -27,6 +27,9 @@ For Software: VSCode.
 There is nothing to install.
 # Run
 Since it is a functioning website, there is nothing to run other than the website
+# Links
+-https://7fggyn-3000.csb.app/
+-https://useless-xi.vercel.app/(if first one is down)
 
 
 # Screenshots (Add at least 3)
