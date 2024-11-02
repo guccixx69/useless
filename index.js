@@ -1,7 +1,7 @@
 console.log("Hello CodeSandbox");
 // index.js
 require('dotenv').config();
-//require('dotenv').config();
+require("dotenv").config();
 //API_KEY=62dc0ae6d9c722b614c6e5121448c4a0
 console.log('API_KEY:', process.env.API_KEY);
 
