@@ -11,7 +11,7 @@ Welcome to UselessUChecker, serving one purpose: to answer the question, “Shou
 
 
 ### The Solution (that nobody asked for)
-This can help to let the personal know if they will have to carry a umbrella without any ads or distractions.
+This can help to let the personal know if they will have to carry a umbrella without any ads.
 
 ## Technical Details
 ### Technologies/Components-Html,CSS,OpenWeatherAPI,Vercel,codesandbox
