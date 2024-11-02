@@ -19,7 +19,7 @@ For Software:
 - Languages-HTML,CSS,JavaScript
 - Framework-Express
 - Library-Axios
-- Tools-Node.JS,Codesandbox,(The environment for rapid prototyping and development),dotenv(module that loads environment variables from a .env file into process.env), N
+- Tools: -Node.JS,Codesandbox,(The environment for rapid prototyping and development),dotenv(module that loads environment variables from a .env file into process.env)
 
 ### Implementation
 For Software: VSCode.
